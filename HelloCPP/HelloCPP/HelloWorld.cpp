@@ -14,7 +14,8 @@ int helloWorld::exec(){
 	dataType();
 	literalConstant();
 	variable();
-	
+	logicalBitwise();
+
 	return 0;
 }
 
@@ -64,6 +65,7 @@ int helloWorld::variable(){
 	scoreForStudent = 80.0;
 	levelForStudent = 'B';
 
+	cout << "\n變數（Variable）!\n";
 	cout << "\n年級\t得分\t等級";
 	cout << "\n" << ageForStudent
 		<< "\t" << scoreForStudent
@@ -73,3 +75,33 @@ int helloWorld::variable(){
 
 	return 0;
 }
+
+int helloWorld::logicalBitwise(){
+
+	cout << "\n邏輯（Logical）運算、位元（Bitwise）運算!\n";
+	cout << "AND運算：" << endl;
+	cout << "0 AND 0\t\t" << (0 & 0) << endl;
+	cout << "0 AND 1\t\t" << (0 & 1) << endl;
+	cout << "1 AND 0\t\t" << (1 & 0) << endl;
+	cout << "1 AND 1\t\t" << (1 & 1) << endl;
+
+	cout << "OR運算：" << endl;
+	cout << "0 OR 0\t\t" << (0 | 0) << endl;
+	cout << "0 OR 1\t\t" << (0 | 1) << endl;
+	cout << "1 OR 0\t\t" << (1 | 0) << endl;
+	cout << "1 OR 1\t\t" << (1 | 1) << endl;
+
+	cout << "XOR運算：" << endl;
+	cout << "0 XOR 0\t\t" << (0 ^ 0) << endl;
+	cout << "0 XOR 1\t\t" << (0 ^ 1) << endl;
+	cout << "1 XOR 0\t\t" << (1 ^ 0) << endl;
+	cout << "1 XOR 1\t\t" << (1 ^ 1) << endl;
+
+	cout << "NOT運算：" << endl;
+	cout << "NOT 0\t\t" << (!0) << endl;
+	cout << "NOT 1\t\t" << (!1) << endl;
+
+	return 0;
+
+}
+

@@ -7,4 +7,5 @@ class helloWorld{
 		int dataType();
 		int literalConstant();
 		int variable();
+		int logicalBitwise();
 };

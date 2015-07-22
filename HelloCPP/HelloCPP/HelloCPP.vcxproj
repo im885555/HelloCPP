@@ -79,10 +79,12 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Advancedcpp.cpp" />
     <ClCompile Include="HelloCPP.cpp" />
     <ClCompile Include="HelloWorld.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Advanced.h" />
     <ClInclude Include="HelloWorld.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
