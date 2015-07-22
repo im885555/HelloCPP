@@ -1,0 +1,6 @@
+
+
+class helloWorld{
+	public: 
+		helloWorld();
+};
