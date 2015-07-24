@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Advancedcpp.cpp" />
+    <ClCompile Include="FunctionPointer.cpp" />
     <ClCompile Include="HelloCPP.cpp" />
     <ClCompile Include="HelloWorld.cpp" />
     <ClCompile Include="Recursion.cpp" />
@@ -87,6 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Advanced.h" />
+    <ClInclude Include="FunctionPointer.h" />
     <ClInclude Include="HelloWorld.h" />
     <ClInclude Include="Recursion.h" />
     <ClInclude Include="ReturnBy.h" />
