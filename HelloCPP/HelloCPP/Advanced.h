@@ -20,4 +20,26 @@ class advanced{
 		int pointer4();
 		int pointer5();
 		int pointer6();
+
+		int pointerArithmetic();
+		int pointerArithmetic2();
+
+		int pointerAndArray();
+		int pointerAndArray2();
+		int pointerAndArray3();
+		int newDelete();
+		int newDelete2();
+		int newDelete3();
+
+		int doublePointer();
+		int doublePointer2();
+
+		int pointerAndString();
+		int pointerAndString2();
+		int pointerAndString3();
+		int pointerAndString4();
+
+		int reference();
+	private:
+		void foo(const int* p);
 };

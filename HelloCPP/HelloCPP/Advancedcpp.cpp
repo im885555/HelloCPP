@@ -20,6 +20,14 @@ int advanced::exec(){
 	cStyle();
 	stringPrac();
 	pointer();
+	pointerArithmetic();
+	pointerAndArray();
+	newDelete();
+
+	doublePointer();
+	pointerAndString();
+
+	reference();
 
 	return 0;
 }
@@ -218,7 +226,7 @@ int advanced::cStyle(){
 	char str[] = "hello";
 
 	for (int i = 0; i < (sizeof(str) / sizeof(str[0])); i++) {
-		if (str[i] == '\\0')
+		if (str[i] == '\0')
 			cout << " null";
 		else
 			cout << " " << str[i];
@@ -226,7 +234,7 @@ int advanced::cStyle(){
 	cout << endl;
 
 
-	char str1[80] = { '\\0' };
+	char str1[80] = { '\0' };
 	char str2[] = "caterpillar";
 
 	cout << "str1: " << str1 << endl
@@ -354,10 +362,381 @@ int advanced::pointer3(){
 	int var = 10;
 	int *ptr = &var;
 
-	cout << "變數var的位址：" << &var
+	cout << "指標ptr儲存的值：" << ptr
 		<< endl;
-	cout << "指標ptr指向的位址：" << ptr
+	cout << "取出ptr指向的記憶體位置之值：" << *ptr
+		<< endl;
+
+	pointer4();
+
+	return 0;
+}
+
+int advanced::pointer4(){
+	int var = 10;
+	int *ptr = &var;
+
+	cout << "var = " << var
+		<< endl;
+	cout << "*ptr = " << *ptr
+		<< endl;
+
+	*ptr = 20;
+
+	cout << "var = " << var
+		<< endl;
+	cout << "*ptr = " << *ptr
+		<< endl;
+
+	pointer5();
+
+	return 0;
+}
+
+int advanced::pointer5(){
+	int var = 10;
+	void *vptr = &var;
+
+	// 下面這句不可行，void型態指標不可取值 
+	//cout << *vptr << endl;
+
+	// 轉型為int型態指標並指定給iptr 
+	int *iptr = reinterpret_cast<int*>(vptr);
+	cout << *iptr << endl;
+
+	pointer6();
+
+	return 0;
+}
+
+int advanced::pointer6(){
+	int var = 10;
+
+	cout << "var = " << var << endl;
+
+	foo(&var);
+
+	cout << "var = " << var << endl;
+
+	return 0;
+}
+
+void advanced::foo(const int* p) {
+	int* v = const_cast<int*> (p);
+	*v = 20;
+}
+
+
+int advanced::pointerArithmetic(){
+	cout << "\n指標的運算\n";
+
+	int *ptr = 0;
+
+	cout << "ptr位置：" << ptr
+		<< endl;
+	cout << "ptr+1：" << ptr + 1
+		<< endl;
+	cout << "ptr+2：" << ptr + 2
+		<< endl;
+
+	pointerArithmetic2();
+	return 0;
+}
+int advanced::pointerArithmetic2(){
+
+	double *ptr = 0;
+
+	cout << "ptr位置：" << ptr
+		<< endl;
+	cout << "ptr+1：" << ptr + 1
+		<< endl;
+	cout << "ptr+2：" << ptr + 2
+		<< endl;
+
+
+	return 0;
+}
+
+
+int advanced::pointerAndArray(){
+	cout << "\n指標與陣列\n";
+
+	int arr[10] = { 0 };
+	cout << "arr :\t\t" << arr
+		<< endl;
+	cout << "&arr[0]: \t" << &arr[0]
+		<< endl;
+
+
+	pointerAndArray2();
+	return 0;
+}
+
+int advanced::pointerAndArray2(){
+
+	const int length = 10;
+	int arr[length] = { 0 };
+	int *ptr = arr;
+
+	for (int i = 0; i < length; i++) {
+		cout << "&arr[" << i << "]: " << &arr[i];
+		cout << "\tptr+" << i << ": " << ptr + i;
+		cout << endl;
+	}
+
+
+	pointerAndArray3();
+	return 0;
+}
+
+int advanced::pointerAndArray3(){
+
+	const int length = 5;
+	int arr[length] = { 10, 20, 30, 40, 50 };
+	int *ptr = arr;
+
+	// 以指標方式存取資料 
+	for (int i = 0; i < length; i++) {
+		cout << "*(ptr+" << i << "): " << *(ptr + i)
+			<< endl;
+	}
+	cout << endl;
+
+	// 以陣列方式存取資料 
+	for (int i = 0; i < length; i++) {
+		cout << "ptr[" << i << "]: " << ptr[i]
+			<< endl;
+	}
+	cout << endl;
+
+	// 以指標方式存取資料 
+	for (int i = 0; i < length; i++) {
+		cout << "*(arr+" << i << "): " << *(arr + i)
+			<< endl;
+	}
+	cout << endl;
+
+	// 以陣列方式存取資料 
+	for (int i = 0; i < length; i++) {
+		cout << "arr[" << i << "]: " << arr[i]
+			<< endl;
+	}
+	cout << endl;
+
+	return 0;
+}
+
+
+int advanced::newDelete(){
+	cout << "\nnew 運算子與 delete 運算子\n";
+
+	int *ptr = new int(100);
+
+	cout << "空間位置:" << ptr
+		<< endl;
+	cout << "空間儲存值：" << *ptr
+		<< endl;
+
+	*ptr = 200;
+
+	cout << "空間位置:" << ptr
+		<< endl;
+	cout << "空間儲存值：" << *ptr
+		<< endl;
+
+	delete ptr;
+	newDelete2();
+	return 0;
+}
+
+int advanced::newDelete2(){
+
+	int size = 5;
+
+	int *arr = new int[size];
+
+	cout << "指定元素值：" << endl;
+	for (int i = 0; i < size; i++) {
+		cout << "arr[" << i << "] = " << i <<endl;
+		*(arr + i) = i;
+	}
+
+	cout << "顯示元素值：" << endl;
+	for (int i = 0; i < size; i++) {
+		cout << "arr[" << i << "] = " << *(arr + i)
+			<< endl;
+	}
+
+	delete[] arr;
+
+	newDelete3();
+
+	return 0;
+}
+
+int advanced::newDelete3(){
+
+	int m = 4;
+	int n = 5;
+
+
+	int *ptr = new int[m*n];
+
+	for (int i = 0; i < m; i++) {
+		for (int j = 0; j < n; j++) {
+			*(ptr + n*i + j) = i + j;
+		}
+	}
+
+	for (int i = 0; i < m; i++) {
+		for (int j = 0; j < n; j++) {
+			cout << *(ptr + n*i + j) << "\t";
+		}
+		cout << endl;
+	}
+
+	delete[] ptr;
+
+	return 0;
+}
+
+int advanced::doublePointer(){
+	cout << "\n雙重指標\n";
+
+	int p = 10;
+	int *ptr = &p;
+
+	cout << "p的值：" << p
+		<< endl;
+	cout << "p的記憶體位置: " << &p
+		<< endl;
+	cout << "*ptr參照的值: " << *ptr
+		<< endl;
+
+	cout << "ptr儲存的位址值: " << ptr
+		<< endl;
+	cout << "ptr的記憶體位置: " << &ptr
+		<< endl;
+
+
+	doublePointer2();
+	return 0;
+}
+
+int advanced::doublePointer2(){
+
+	int p = 10;
+	int *ptr1 = &p;
+	int **ptr2 = &ptr1;
+
+	cout << "p的值：" << p << endl;
+	cout << "p的記憶體位置: " << &p << endl;
+
+	cout << endl;
+
+	cout << "*ptr1 = " << *ptr1 << endl;
+	cout << "ptr1 = " << ptr1 << endl;
+	cout << "ptr1的記憶體位置: " << &ptr1 << endl;
+
+	cout << endl;
+
+	cout << "**ptr2 = " << **ptr2 << endl;
+	cout << "*ptr2 = " << *ptr2 << endl;
+	cout << "ptr2 = " << ptr2 << endl;
+
+	cout << endl;
+
+	cout << "整理(誰儲存了誰？)：" << endl;
+	cout << "&p = " << &p << "\t\t" << "ptr1 = " << ptr1 << endl;
+	cout << "&ptr1 = " << &ptr1 << "\t"
+		<< "ptr2 = " << ptr2
+		<< endl;
+
+
+	return 0;
+}
+
+
+int advanced::pointerAndString(){
+	cout << "\n指標與字串\n";
+
+	char *str = "hello";
+	cout << str << endl;
+
+	str = "world";
+	cout << str << endl;
+
+	pointerAndString2();
+	return 0;
+}
+
+
+int advanced::pointerAndString2(){
+
+	char *str = "hello";
+	void *add = 0;
+
+	add = str;
+	cout << str << "\t"
+		<< add << endl;
+
+	str = "world";
+	add = str;
+	cout << str << "\t"
+		<< add << endl;
+
+	pointerAndString3();
+	return 0;
+}
+
+
+int advanced::pointerAndString3(){
+
+	char *str[] = { "professor", "teacher",
+		"student", "etc." };
+
+	for (int i = 0; i < 4; i++)
+		cout << str[i] << endl;
+
+
+	pointerAndString4();
+	return 0;
+}
+
+
+int advanced::pointerAndString4(){
+	char *str[][2] = { "professor", "Justin",
+		"teacher", "Momor",
+		"student", "Caterpillar" };
+
+	for (int i = 0; i < 3; i++) {
+		cout << str[i][0] << ": "
+			<< str[i][1] << endl;
+	}
+
+
+	return 0;
+}
+
+
+int advanced::reference(){
+	cout << "\n參考（Reference）\n";
+
+	int var = 10;
+	int &ref = var;
+
+	cout << "var: " << var
+		<< endl;
+	cout << "ref: " << ref
+		<< endl;
+
+	ref = 20;
+
+	cout << "var: " << var
+		<< endl;
+	cout << "ref: " << ref
 		<< endl;
 
 	return 0;
 }
+
