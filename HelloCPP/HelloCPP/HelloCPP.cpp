@@ -1,4 +1,4 @@
-#include <iostream> 
+ï»¿#include <iostream> 
 #include "HelloWorld.h"
 #include "Advanced.h"
 #include "Recursion.h"
@@ -8,17 +8,17 @@ using namespace std;
 
 
 int main() {
-	
+
 	int chose = int();
 	cout << "\n";
-	cout << "1.¤Jªù°òÂ¦½m²ß\n";
-	cout << "2.¶i¶¥«¬ºA\n";
-	cout << "3.»¼°j\n";
-	cout << "4.return ªº¶Ç­È¡B¶Ç°Ñ¦Ò ,  ¤£©wªø«×¤Þ¼Æ\n";
-	cout << "5.¨ç¦¡«ü¼Ð\n";
-	cout << "½Ð¿ï¾Ü: ";
+	cout << "1.å…¥é–€åŸºç¤Žç·´ç¿’\n";
+	cout << "2.é€²éšŽåž‹æ…‹\n";
+	cout << "3.éžè¿´\n";
+	cout << "4.return çš„å‚³å€¼ã€å‚³åƒè€ƒ ,  ä¸å®šé•·åº¦å¼•æ•¸\n";
+	cout << "5.å‡½å¼æŒ‡æ¨™\n";
+	cout << "è«‹é¸æ“‡: ";
 	cin >> chose;
-	cout << "±z¿ï¾Ü¡G" << chose << "\n";
+	cout << "æ‚¨é¸æ“‡ï¼š" << chose << "\n";
 
 	switch (chose) {
 	case 1:
@@ -37,10 +37,11 @@ int main() {
 		FunctionPointer();
 		break;
 	default:
+		break;
 		helloWorld();
 	}
 
-	
+
 
 	system("Pause");
 	return 0;

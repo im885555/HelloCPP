@@ -1,4 +1,4 @@
-#include <iostream> 
+ï»¿#include <iostream> 
 #include "Recursion.h"
 using namespace std;
 
@@ -6,13 +6,13 @@ Recursion::Recursion() {
 	int m = 0;
 	int n = 0;
 
-	cout << "¿é¤J¨â¼Æ¡G";
+	cout << "è¼¸å…¥å…©æ•¸ï¼š";
 	cin >> m >> n;
 
 	cout << "GCD: "
 		<< gcd(m, n) << endl;
 
-	
+
 }
 
 int Recursion::gcd(int m, int n) {

@@ -1,4 +1,4 @@
-#include <iostream> 
+﻿#include <iostream> 
 #include <string>
 #include <cstdarg> 
 using namespace std;
@@ -10,7 +10,7 @@ public:
 private:
 	int* createArray(int);
 	void deleteArray(int*);
-	
+
 	string& foo();
 	void foo(int, ...);
 };

@@ -1,7 +1,7 @@
-#include "FunctionPointer.h"
+ï»¿#include "FunctionPointer.h"
 
 FunctionPointer::FunctionPointer(){
-	int (*ptr)() = 0;
+	int(*ptr)() = 0;
 
 	ptr = foo;
 
@@ -14,7 +14,7 @@ FunctionPointer::FunctionPointer(){
 		<< (int)ptr << endl;
 
 	lesson1::lesson1();
-	sortlesson:sortlesson();
+sortlesson:sortlesson();
 }
 
 int FunctionPointer::foo(){
@@ -59,7 +59,7 @@ char FunctionPointer::lesson1::foo(int n, char c) {
 FunctionPointer::sortlesson::sortlesson(){
 	int number1[] = { 3, 5, 1, 6, 9 };
 	sort(number1, 5, larger);
-	cout << "¤jªº¦b«e ";
+	cout << "å¤§çš„åœ¨å‰ ";
 	for (int i = 0; i < 5; i++) {
 		cout << number1[i] << " ";
 	}
@@ -67,7 +67,7 @@ FunctionPointer::sortlesson::sortlesson(){
 
 	int number2[] = { 3, 5, 1, 6, 9 };
 	sort(number2, 5, smaller);
-	cout << "¤pªº¦b«e ";
+	cout << "å°çš„åœ¨å‰ ";
 	for (int i = 0; i < 5; i++) {
 		cout << number2[i] << " ";
 	}

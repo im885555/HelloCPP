@@ -1,13 +1,13 @@
-
+﻿
 #include "ReturnBy.h"
 
 
 ReturnBy::ReturnBy(){
-	cout << "\nreturn ���ǭȡB�ǰѦҡG\n" << endl;
+	cout << "\nreturn 的傳值、傳參考：\n" << endl;
 
-	int m =5;
+	int m = 5;
 
-	cout << "�}�C�j�p: 5";
+	cout << "陣列大小: 5";
 
 	int *arr = createArray(m);
 
@@ -29,15 +29,15 @@ ReturnBy::ReturnBy(){
 
 	delete &str;
 
-	cout << "\n���w���פ޼ơG\n" << endl;
+	cout << "\n不定長度引數：\n" << endl;
 
 	double x = 1.1, y = 2.1, z = 3.9;
 	double a = 0.1, b = 0.2, c = 0.3;
 
-	cout << "�T�ӰѼơG" << endl;
+	cout << "三個參數：" << endl;
 	foo(3, x, y, z);
 
-	cout << "���ӰѼơG" << endl;
+	cout << "六個參數：" << endl;
 	foo(6, x, y, z, a, b, c);
 }
 

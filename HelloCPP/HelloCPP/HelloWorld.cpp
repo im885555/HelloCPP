@@ -1,11 +1,11 @@
-#include <iostream> 
+ï»¿#include <iostream> 
 #include "HelloWorld.h" 
 using namespace std;
 
 
 helloWorld::helloWorld(){
 	cout << "Hello! World!\n";
-	cout << "«¢Åo! C++!\n";
+	cout << "å“ˆå›‰! C++!\n";
 	exec();
 }
 
@@ -22,8 +22,8 @@ int helloWorld::exec(){
 
 int helloWorld::dataType(){
 
-	cout << "\n¸ê®Æ«¬ºA!\n";
-	cout << "\n«¬ºA\t¤j¤p(bytes)";
+	cout << "\nè³‡æ–™åž‹æ…‹!\n";
+	cout << "\nåž‹æ…‹\tå¤§å°(bytes)";
 	cout << "\nint\t" << sizeof(int);
 	cout << "\nlong\t" << sizeof(long);
 	cout << "\nfloat\t" << sizeof(float);
@@ -42,13 +42,13 @@ int helloWorld::dataType(){
 }
 
 int helloWorld::literalConstant(){
-	cout << "\n¦r­±±`¶q!\n";
+	cout << "\nå­—é¢å¸¸é‡!\n";
 	cout << "sizeof(1): " << sizeof(1) << "\n";
 	cout << "sizeof(1.0): " << sizeof(1.0) << "\n";
 
-	cout << 26 << "\n"; // 10¶i¦ì
-	cout << 032 << "\n"; // 8¶i¦ì
-	cout << 0x1A << "\n"; // 16¶i¦ì
+	cout << 26 << "\n"; // 10é€²ä½
+	cout << 032 << "\n"; // 8é€²ä½
+	cout << 0x1A << "\n"; // 16é€²ä½
 
 	return 0;
 }
@@ -65,8 +65,8 @@ int helloWorld::variable(){
 	scoreForStudent = 80.0;
 	levelForStudent = 'B';
 
-	cout << "\nÅÜ¼Æ¡]Variable¡^!\n";
-	cout << "\n¦~¯Å\t±o¤À\tµ¥¯Å";
+	cout << "\nè®Šæ•¸ï¼ˆVariableï¼‰!\n";
+	cout << "\nå¹´ç´š\tå¾—åˆ†\tç­‰ç´š";
 	cout << "\n" << ageForStudent
 		<< "\t" << scoreForStudent
 		<< "\t" << levelForStudent
@@ -78,26 +78,26 @@ int helloWorld::variable(){
 
 int helloWorld::logicalBitwise(){
 
-	cout << "\nÅÞ¿è¡]Logical¡^¹Bºâ¡B¦ì¤¸¡]Bitwise¡^¹Bºâ!\n";
-	cout << "AND¹Bºâ¡G" << endl;
+	cout << "\né‚è¼¯ï¼ˆLogicalï¼‰é‹ç®—ã€ä½å…ƒï¼ˆBitwiseï¼‰é‹ç®—!\n";
+	cout << "ANDé‹ç®—ï¼š" << endl;
 	cout << "0 AND 0\t\t" << (0 & 0) << endl;
 	cout << "0 AND 1\t\t" << (0 & 1) << endl;
 	cout << "1 AND 0\t\t" << (1 & 0) << endl;
 	cout << "1 AND 1\t\t" << (1 & 1) << endl;
 
-	cout << "OR¹Bºâ¡G" << endl;
+	cout << "ORé‹ç®—ï¼š" << endl;
 	cout << "0 OR 0\t\t" << (0 | 0) << endl;
 	cout << "0 OR 1\t\t" << (0 | 1) << endl;
 	cout << "1 OR 0\t\t" << (1 | 0) << endl;
 	cout << "1 OR 1\t\t" << (1 | 1) << endl;
 
-	cout << "XOR¹Bºâ¡G" << endl;
+	cout << "XORé‹ç®—ï¼š" << endl;
 	cout << "0 XOR 0\t\t" << (0 ^ 0) << endl;
 	cout << "0 XOR 1\t\t" << (0 ^ 1) << endl;
 	cout << "1 XOR 0\t\t" << (1 ^ 0) << endl;
 	cout << "1 XOR 1\t\t" << (1 ^ 1) << endl;
 
-	cout << "NOT¹Bºâ¡G" << endl;
+	cout << "NOTé‹ç®—ï¼š" << endl;
 	cout << "NOT 0\t\t" << (!0) << endl;
 	cout << "NOT 1\t\t" << (!1) << endl;
 
