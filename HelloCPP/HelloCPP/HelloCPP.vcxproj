@@ -89,13 +89,18 @@
     <ClCompile Include="SafeArray.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AbstractCircle.h" />
     <ClInclude Include="Advanced.h" />
+    <ClInclude Include="ConcreteCircle.h" />
     <ClInclude Include="DemoClass.h" />
     <ClInclude Include="FunctionPointer.h" />
     <ClInclude Include="HelloWorld.h" />
+    <ClInclude Include="HollowCircle.h" />
     <ClInclude Include="Recursion.h" />
     <ClInclude Include="ReturnBy.h" />
+    <ClInclude Include="RTTI.h" />
     <ClInclude Include="SafeArray.h" />
+    <ClInclude Include="VirtualFunction.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

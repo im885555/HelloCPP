@@ -1,3 +1,13 @@
+#include <iostream> 
+#include "SafeArray.h"
+#include "VirtualFunction.h"
+#include "AbstractCircle.h"
+#include "ConcreteCircle.h"
+#include "HollowCircle.h"
+#include "RTTI.h"
+
+using namespace std;
+
 class DemoClass {
 public:
 	DemoClass();
@@ -6,8 +16,13 @@ public:
     int friendFunctionClass();
 	int ObjectPointer();
 	int LocalClasses();
+	int VirtualFunction();
+	int PureVirtualFunction();
+	int RTTI();
 private :
-
+	void render(AbstractCircle &circle);
+	void showWho(Base *base);
+	void showWho(Base &base);
 
 };
 
