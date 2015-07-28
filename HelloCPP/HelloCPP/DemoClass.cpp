@@ -12,6 +12,7 @@ int  DemoClass::exec() {
 	VirtualFunction();
 	PureVirtualFunction();
 	RTTI();
+	MultiInheritance();
 	return 0;
 }
 
@@ -241,4 +242,21 @@ void DemoClass::showWho(Base &base) {
 	catch (bad_cast) {
 		cout << "bad_cast 轉型失敗" << endl;
 	}
+}
+
+int DemoClass::MultiInheritance() {
+	cout << "\n多重繼承\n";
+
+
+	Welcome welcome;
+	Hello hello;
+
+	doRequest(&welcome);
+	doRequest(&hello);
+
+	return 0;
+}
+
+void DemoClass::doRequest(IRequest *request) {
+	request->execute();
 }

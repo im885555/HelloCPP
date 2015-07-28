@@ -96,6 +96,7 @@
     <ClInclude Include="FunctionPointer.h" />
     <ClInclude Include="HelloWorld.h" />
     <ClInclude Include="HollowCircle.h" />
+    <ClInclude Include="MultiInheritance.h" />
     <ClInclude Include="Recursion.h" />
     <ClInclude Include="ReturnBy.h" />
     <ClInclude Include="RTTI.h" />

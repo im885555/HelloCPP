@@ -5,6 +5,7 @@
 #include "ConcreteCircle.h"
 #include "HollowCircle.h"
 #include "RTTI.h"
+#include "MultiInheritance.h"
 
 using namespace std;
 
@@ -19,10 +20,12 @@ public:
 	int VirtualFunction();
 	int PureVirtualFunction();
 	int RTTI();
+	int MultiInheritance();
 private :
 	void render(AbstractCircle &circle);
 	void showWho(Base *base);
 	void showWho(Base &base);
+	void doRequest(IRequest *request);
 
 };
 

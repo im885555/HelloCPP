@@ -80,5 +80,8 @@
     <ClInclude Include="RTTI.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MultiInheritance.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
