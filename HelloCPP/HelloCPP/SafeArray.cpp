@@ -1,12 +1,13 @@
-#include "SafeArray.h"
+ï»¿#include "SafeArray.h"
+#include "ArrayIndexOutOfBoundsException.h"
 
-// °ÊºA°t¸m°}¦C
+// å‹•æ…‹é…ç½®é™£åˆ—
 SafeArray::SafeArray(int len) {
 	length = len;
 	_array = new int[length];
 }
 
-// ´ú¸Õ¬O§_¶W¥X°}¦Cªø«×
+// æ¸¬è©¦æ˜¯å¦è¶…å‡ºé™£åˆ—é•·åº¦
 bool SafeArray::isSafe(int i) {
 	if (i >= length || i < 0) {
 		return false;
@@ -16,23 +17,30 @@ bool SafeArray::isSafe(int i) {
 	}
 }
 
-// ¨ú±o°}¦C¤¸¯À­È
+// å–å¾—é™£åˆ—å…ƒç´ å€¼
 int SafeArray::get(int i) {
 	if (isSafe(i)) {
 		return _array[i];
 	}
-
+	else {
+		// å­˜å–è¶…éŽé™£åˆ—é•·åº¦ï¼Œä¸Ÿå‡ºä¾‹å¤– 
+		throw ArrayIndexOutOfBoundsException(i);
+	}
 	return 0;
 }
 
-// ³]©w°}¦C¤¸¯À­È
+// è¨­å®šé™£åˆ—å…ƒç´ å€¼
 void SafeArray::set(int i, int value) {
 	if (isSafe(i)) {
 		_array[i] = value;
 	}
+	else {
+		// å­˜å–è¶…éŽé™£åˆ—é•·åº¦ï¼Œä¸Ÿå‡ºä¾‹å¤–
+		throw ArrayIndexOutOfBoundsException(i);
+	}
 }
 
-// §R°£°ÊºA°t¸mªº¸ê·½
+// åˆªé™¤å‹•æ…‹é…ç½®çš„è³‡æº
 SafeArray::~SafeArray() {
 	delete[] _array;
 }

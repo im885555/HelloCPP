@@ -80,7 +80,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Advanced.cpp" />
+    <ClCompile Include="ArrayIndexOutOfBoundsException.cpp" />
     <ClCompile Include="DemoClass.cpp" />
+    <ClCompile Include="DemoTemplate.cpp" />
     <ClCompile Include="FunctionPointer.cpp" />
     <ClCompile Include="HelloCPP.cpp" />
     <ClCompile Include="HelloWorld.cpp" />
@@ -91,8 +93,11 @@
   <ItemGroup>
     <ClInclude Include="AbstractCircle.h" />
     <ClInclude Include="Advanced.h" />
+    <ClInclude Include="ArrayIndexOutOfBoundsException.h" />
     <ClInclude Include="ConcreteCircle.h" />
     <ClInclude Include="DemoClass.h" />
+    <ClInclude Include="DemoTemplate.h" />
+    <ClInclude Include="Exception.h" />
     <ClInclude Include="FunctionPointer.h" />
     <ClInclude Include="HelloWorld.h" />
     <ClInclude Include="HollowCircle.h" />

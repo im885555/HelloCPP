@@ -5,6 +5,7 @@
 #include "ReturnBy.h"
 #include "FunctionPointer.h"
 #include "DemoClass.h"
+#include "DemoTemplate.h"
 using namespace std;
 
 
@@ -18,6 +19,7 @@ int main() {
 	cout << "4.return 的傳值、傳參考 ,  不定長度引數\n";
 	cout << "5.函式指標\n";
 	cout << "6.物件基礎 , 物件導向\n";
+	cout << "7.樣板\n";
 	cout << "請選擇: ";
 	cin >> chose;
 	cout << "您選擇：" << chose << "\n";
@@ -40,6 +42,8 @@ int main() {
 		break;
 	case 6:
 		DemoClass();
+	case 7:
+		DemoTemplate();
 	default:
 		break;
 	}
